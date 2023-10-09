@@ -1,0 +1,16 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$baseurl: "{{ site.baseurl }}";
+
+// Imports
+@import "../_sass/bootstrap/bootstrap-grid.scss";
+@import "../_sass/reset";
+@import "../_sass/variable";
+@import "../_sass/global";
+@import "../_sass/section";
+@import "../_sass/includes/cookies";
+@import "../_sass/includes/footer";
+@import "../_sass/includes/menu";
