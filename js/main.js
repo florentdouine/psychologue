@@ -12,6 +12,34 @@ function toggleMenu() {
     }
 }
 
+function noScroll() {
+    window.scrollTo(0, 0);
+}
+
+function disableScroll() {
+    // add listener to disable scroll
+    window.addEventListener('scroll', noScroll);
+}
+
+function enableSroll() {
+    // Remove listener to re-enable scroll
+    window.removeEventListener('scroll', noScroll);
+}
+
+// Cookies
+function checkCookiesStatus() {
+    var status = getCookie("cookiesAccepted")
+    if (status == "") {
+        return
+    }
+
+    document.getElementById("cookies-banner").style.display = "none";
+    
+    if (status == "true") {
+        startGA()
+    }
+}
+
 checkCookiesStatus();
 
 function acceptCookies() {

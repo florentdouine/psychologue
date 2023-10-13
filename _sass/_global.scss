@@ -2,8 +2,8 @@
 html,
 body {
   font-family: $font-family;
-  color: $color-content-reverse;
-  @include text-style-body;
+  color: $color-content-main;
+  font-size: $font-size-body;
 }
 
 a {
@@ -12,29 +12,15 @@ a {
 }
 
 body {
-  background-color: black;
+  background-color: white;
 }
 
 h1 {
-  @include text-style-title-1;
+  font-size: $font-size-header-extra-large;
 }
 
 h2 {
-  @include text-style-title-2;
-}
-
-h3 {
-  @include text-style-title-3;
-  display: inline;
-  z-index: 10;
-}
-
-h4 {
-  @include text-style-title-4;
-}
-
-p {
-  line-height: 28px;
+  font-size: $font-size-header-large;
 }
 
 a {
@@ -43,14 +29,6 @@ a {
 
 ul li {
   list-style-type: none;
-}
-
-.caption {
-  @include text-style-caption;
-}
-
-strong {
-  font-weight: $font-weight-bold;
 }
 
 img {
@@ -63,17 +41,10 @@ img {
   }
 }
 
-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  z-index: -1;
-}
-
 input[type="text"],
 input[type="email"],
 input[type="phone"] {
-  border-bottom: 3px solid $color-content-dark;
+  border-bottom: 3px solid $color-content-main;
   border-radius: 0;
   -webkit-appearance: none;
 }
@@ -93,7 +64,7 @@ label {
 }
 
 textarea {
-  border: 3px solid $color-content-dark;
+  border: 3px solid $color-content-main;
   border-radius: 0;
   -webkit-appearance: none;
   min-height: 200px;
@@ -108,15 +79,4 @@ textarea {
   @include media-breakpoint-down(sm) {
     display: none;
   }
-}
-
-.inline-link:hover {
-  font-weight: $font-weight-bold;
-}
-
-.small-text {
-  font-size: $font-size-caption;
-  font-style: italic;
-  line-height: 16px;
-  display: inline-block;
 }

@@ -4,13 +4,25 @@
 
 <nav>
     <ul>
-        {% for the_page in main_pages %}
         <li>
-            <a href="{{ the_page.url | prepend: site.baseurl }}" title="{{ the_page.title }}" class="shadow-accented {% if the_page.order == page.order %} active{% endif %}">
+        <a href="{{ site.baseurl }}">Priscille Douine</li>
+        {% for the_page in main_pages %}
+        <li class="d-none-mobile">
+            <a href="{{ the_page.url | prepend: site.baseurl }}">
                 {{ the_page.menu-title }}
             </a>
         </li>
         {% endfor %}
+        <li class="d-lg-none" >
+            <button id="link-mobile-menu" onclick="toggleMenu()">
+                Menu
+                <span for="check" id="cmp-burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+        </li>
     </ul>
 </nav>
 
