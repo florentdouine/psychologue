@@ -1,11 +1,17 @@
 // Variables
-$color-accent-main: #a3b8b4;
+$color-accent-main: #688882;
 
-$color-content-main: #000000;
+$color-content-main: #656565;
+$color-content-reverse: #ffffff;
 
-$font-family: Futura, sans-serif;
+$color-background-accented: #bfd1ce;
+$color-background-gray: #EEE;
+$color-background-dark: #383e3d;
+
+$font-family: futura-lt-w01-light, futura-lt-w05-light, sans-serif;
 
 $font-size-header-extra-large: 100px;
+$font-size-header-extra-large-sm: 40px;
 $font-size-header-large: 24px;
 $font-size-menu: 18px;
 $font-size-body: 16px;
@@ -14,4 +20,15 @@ $font-size-body: 16px;
 @font-face {
     font-family: "Futura";
     src: url("../font/futura-light-bt.ttf");
+}
+@font-face {
+    font-family:"Futura-LT-W01-Light";
+    src:url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/26091050-06ef-4fd5-b199-21b27c0ed85e.woff2") format("woff2"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/cca525a8-ad89-43ae-aced-bcb49fb271dc.woff") format("woff");
+font-display: block;
+}
+@font-face {
+    font-family: "Futura-LT-W05-Light";
+    src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Futura_Complete/v1/FuturaLTW05-LightCondensed.woff2") format("woff2"),
+    url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Futura_Complete/v1/FuturaLTW05-LightCondensed.woff") format("woff");
+font-display: block;
 }

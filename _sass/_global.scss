@@ -17,14 +17,27 @@ body {
 
 h1 {
   font-size: $font-size-header-extra-large;
+  @include media-breakpoint-down(sm) {
+    font-size: $font-size-header-extra-large-sm;
+  }
 }
 
 h2 {
   font-size: $font-size-header-large;
+  margin: 20px 0px;
+}
+
+h3 {
+  font-size: $font-size-header-large;
+  margin: 20px 0px;
 }
 
 a {
   cursor: pointer;
+}
+
+p {
+  line-height: 30px;
 }
 
 ul li {
@@ -41,42 +54,15 @@ img {
   }
 }
 
-input[type="text"],
-input[type="email"],
-input[type="phone"] {
-  border-bottom: 3px solid $color-content-main;
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="phone"],
-label {
-  padding-left: 25px;
-}
-
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="phone"]::placeholder,
-label {
-  color: $color-content-main;
-}
-
-textarea {
-  border: 3px solid $color-content-main;
-  border-radius: 0;
-  -webkit-appearance: none;
-  min-height: 200px;
-  padding: 5px;
-
-  @include media-breakpoint-down(sm) {
-    min-height: 130px;
-  }
-}
-
 .d-none-mobile {
   @include media-breakpoint-down(sm) {
     display: none;
   }
+}
+
+footer {
+  background-color: $color-background-dark;
+  text-align: center;
+  padding: 20px 0px;
+  color: $color-content-reverse;
 }

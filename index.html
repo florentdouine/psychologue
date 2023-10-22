@@ -5,3 +5,70 @@ menu-title: Accueil
 order: 1
 ---
 
+<section class="section-col-light row flex-md-row-reverse">
+
+    <div class="col-md-6 section-col-detailed section-col-light">
+        <div class="section-col-detailed-container" id="home-presentation">
+            <h1 class="anim-left-apparition">Priscille Douine</h1>
+            <h2 class="anim-right-apparition line-left">Psychologue praticienne</h2>
+            <p class="anim-left-apparition">
+                Chacun, adulte, enfant, adolescent, peut avoir quelque chose à comprendre, à dire ou à changer de sa propre histoire, à un moment de son existence.<br/>
+                <br/>
+Le psychologue est là pour vous accompagner dans cette réflexion enrichissante, dans une écoute bienveillante, sans jugement.<br/>
+<br/>
+Tout en garantissant le secret professionnel, le psychologue vous aide à clarifier votre situation, à entreprendre des démarches de changement et à explorer vos ressources.<br/>
+            </p>
+    
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img src="/images/mock_1.webp" class="cmp-full-col-img" alt="">
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-md-6 section-col-detailed section-col-accented">
+        <div class="section-col-detailed-container">
+            <h3 class="line-below">Thérapie</h3>
+        </div>
+    </div>
+
+    <div class="col-md-6 section-col-detailed section-col-accented">
+        <div class="section-col-detailed-container">
+            <p class="anim-fadein-apparition">
+                Chacun, adulte, enfant, adolescent, peut avoir quelque chose à comprendre, à dire ou à changer de sa propre histoire, à un moment de son existence.<br/>
+                <br/>
+Le psychologue est là pour vous accompagner dans cette réflexion enrichissante, dans une écoute bienveillante, sans jugement.<br/>
+<br/>
+Tout en garantissant le secret professionnel, le psychologue vous aide à clarifier votre situation, à entreprendre des démarches de changement et à explorer vos ressources.<br/>
+            </p>
+            <a href="{% link contact.html %}" class="button button-accented">Me contacter</a>
+        </div>
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-md-6 section-col-detailed section-col-gray">
+        <div class="section-col-detailed-container">
+            <img src="/images/mock_1.webp" class="cmp-full-col-img" alt="">
+        </div>
+    </div>
+
+    <div id="contact-form-section" class="col-md-6 section-col-detailed section-col-gray">
+        <h3 class="line-below">Contact</h3>
+        <form id="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST" />
+            <input type="text" name="name" id="input-contact-name" placeholder="Nom *"/>
+            <input type="email" name="email" id="input-contact-email" placeholder="Email *"/>
+            <input type="phone" name="phone" id="input-contact-phone" placeholder="Téléphone"/>
+            <textarea placeholder="Message *" name="message" id="input-contact-message"></textarea>
+            <input type="hidden" name="_subject" value="Nouveau contact">
+            <input type="hidden" name="_next" value="{{ site.url }}{% link contact.html %}?submitted=true#contact-form-section" />
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="true">
+            <a href="javascript:submit()" class="button button-accented">Envoyer</a>
+        </form>
+        <p id="contact-thanks" style="display: none;">
+            Votre message a bien été envoyé. Nous reviendrons vers vous rapidement !
+        </p>
+    </div>
+</section>

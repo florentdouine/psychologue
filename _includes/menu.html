@@ -5,15 +5,15 @@
 <nav>
     <ul>
         <li>
-        <a href="{{ site.baseurl }}">Priscille Douine</li>
+        <a href="{% link index.html %}">Priscille Douine</li>
         {% for the_page in main_pages %}
-        <li class="d-none-mobile">
+        <li class="d-none d-sm-block">
             <a href="{{ the_page.url | prepend: site.baseurl }}">
                 {{ the_page.menu-title }}
             </a>
         </li>
         {% endfor %}
-        <li class="d-lg-none" >
+        <li class="d-sm-none" >
             <button id="link-mobile-menu" onclick="toggleMenu()">
                 Menu
                 <span for="check" id="cmp-burger-menu">

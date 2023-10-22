@@ -4,11 +4,9 @@ function toggleMenu() {
     if(el.classList.contains("active")) {
         el.classList.remove("active");
         burger.classList.remove("active");
-        enableSroll();
     } else {
         el.classList.add("active");
         burger.classList.add("active");
-        disableScroll();
     }
 }
 
@@ -26,58 +24,54 @@ function enableSroll() {
     window.removeEventListener('scroll', noScroll);
 }
 
-// Cookies
-function checkCookiesStatus() {
-    var status = getCookie("cookiesAccepted")
-    if (status == "") {
-        return
-    }
-
-    document.getElementById("cookies-banner").style.display = "none";
-    
-    if (status == "true") {
-        startGA()
-    }
+function changeHeaderOpacity() {
+    var percent = Math.min(window.scrollY, 200)/2
+    var alpha = 0.4 + 0.6 * percent / 100
+    document.getElementsByTagName("header")[0].style = "background-color: rgba(255, 255, 255, "+alpha+");"
 }
 
-checkCookiesStatus();
+window.addEventListener('scroll', changeHeaderOpacity);
+changeHeaderOpacity();
 
-function acceptCookies() {
-    setCookie("cookiesAccepted", "true")
-    checkCookiesStatus()
-}
+ScrollReveal().reveal('.anim-fadein-apparition', { 
+    opacity: 0,
+    duration: "2000",
+    easing: "ease-out"
+});
 
-function refuseCookies() {
-    setCookie("cookiesAccepted", "false")
-    checkCookiesStatus()
-}
+ScrollReveal().reveal('.anim-left-apparition', { 
+    distance: '60px' ,
+    opacity: 0,
+    origin: "left",
+    duration: "1000",
+    easing: "ease-out"
+});
 
-function startGA() {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+ScrollReveal().reveal('.anim-right-apparition', { 
+    distance: '60px',
+    opacity: 0,
+    delay: 100,
+    origin: "right",
+    duration: "1000",
+    easing: "ease-out"
+});
 
-    gtag('config', 'UA-139459528-1');
-}
+ScrollReveal().reveal('.anim-fadein-bottom-apparition', { 
+    distance: '60px',
+    opacity: 0,
+    origin: "bottom",
+    duration: "1000",
+    easing: "linear"
+});
 
-function setCookie(cname, cvalue) {
-    document.cookie = cname + "=" + cvalue + ";";
-}
+ScrollReveal().reveal('.anim-bottom-apparition', { 
+    distance: '60px',
+    opacity: 1.0,
+    origin: "bottom",
+    duration: "1000",
+    easing: "linear"
+});
 
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
+function submit() {
+    document.getElementsByTagName("form")[0].submit()
 }
