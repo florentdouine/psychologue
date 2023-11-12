@@ -32,6 +32,10 @@ h3 {
   margin: 20px 0px;
 }
 
+h2 + p, h3 + p {
+  margin-top: 30px;
+}
+
 a {
   cursor: pointer;
 }
@@ -40,8 +44,8 @@ p {
   line-height: 30px;
 }
 
-ul li {
-  list-style-type: none;
+p + a {
+  margin-top: 60px;
 }
 
 img {

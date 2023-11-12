@@ -7,68 +7,76 @@ order: 1
 
 <section class="section-col-light row flex-md-row-reverse">
 
-    <div class="col-md-6 section-col-detailed section-col-light">
-        <div class="section-col-detailed-container" id="home-presentation">
-            <h1 class="anim-left-apparition">Priscille Douine</h1>
-            <h2 class="anim-right-apparition line-left">Psychologue praticienne</h2>
-            <p class="anim-left-apparition">
-                Chacun, adulte, enfant, adolescent, peut avoir quelque chose à comprendre, à dire ou à changer de sa propre histoire, à un moment de son existence.<br/>
+    <div class="col-md-6">
+        <div class="margin-container" id="home-presentation">
+            <h1 class="anim-left-apparition">Priscille</h1>
+            <h1 class="anim-right-apparition">Douine</h1>
+            <h2 class="anim-left-apparition line-left">Psychologue clinicienne</h2>
+            <p class="anim-fadein-apparition">
+                Chacun peut traverser des périodes de difficultés, vivre des événements qui peuvent l’affecter ou ressentir le besoin de changer quelque chose en lui. <br/>
                 <br/>
-Le psychologue est là pour vous accompagner dans cette réflexion enrichissante, dans une écoute bienveillante, sans jugement.<br/>
+En tant que psychologue, je suis là pour vous accompagner dans cette démarche de réflexion, en vous offrant une écoute bienveillante et sans jugement. <br/>
 <br/>
-Tout en garantissant le secret professionnel, le psychologue vous aide à clarifier votre situation, à entreprendre des démarches de changement et à explorer vos ressources.<br/>
+Ensemble nous chercherons à mieux comprendre votre situation, à explorer et valoriser vos ressources pour vous aider à surmonter vos difficultés et apaiser vos souffrances. Mon objectif est de vous accompagner vers un quotidien plus serein, en m’adaptant à vos besoins spécifiques. 
             </p>
     
         </div>
     </div>
+    <div class="col-md-6" id="home-illustration">
+    </div>
+</section>
+
+<section class="row section-col-accented">
     <div class="col-md-6">
-        <img src="/images/mock_1.webp" class="cmp-full-col-img" alt="">
-    </div>
-</section>
-
-<section class="row">
-    <div class="col-md-6 section-col-detailed section-col-accented">
-        <div class="section-col-detailed-container">
-            <h3 class="line-below">Thérapie</h3>
-        </div>
-    </div>
-
-    <div class="col-md-6 section-col-detailed section-col-accented">
-        <div class="section-col-detailed-container">
-            <p class="anim-fadein-apparition">
-                Chacun, adulte, enfant, adolescent, peut avoir quelque chose à comprendre, à dire ou à changer de sa propre histoire, à un moment de son existence.<br/>
-                <br/>
-Le psychologue est là pour vous accompagner dans cette réflexion enrichissante, dans une écoute bienveillante, sans jugement.<br/>
-<br/>
-Tout en garantissant le secret professionnel, le psychologue vous aide à clarifier votre situation, à entreprendre des démarches de changement et à explorer vos ressources.<br/>
+        <div class="margin-container" id="home-rdv">
+            <h3 class="line-below">Se rencontrer</h3>
+            <p>
+                C’est dans une atmosphère d’interaction bienveillante que nous prendrons le temps de nous rencontrer. Vous pourrez alors vous faire une première idée de ma façon de travailler, découvrir le lieu et la qualité de nos échanges.
             </p>
-            <a href="{% link contact.html %}" class="button button-accented">Me contacter</a>
+            <h3 class="line-below">Échanger</h3>
+            <p>
+                Si cela vous convient, nos échanges s’approfondiront, vous permettant d’exprimer vos ressentis, vos émotions et vos questionnements personnels.
+            </p>
+            <h3 class="line-below">Construire</h3>
+            <p>
+                Nous construirons alors ensemble, à votre rythme, le chemin qui vous guidera vers le mieux-être.
+            </p>
         </div>
+    </div>
+
+    <div class="col-md-6 d-flex">
+        <img src="/images/bonsai-316573_1280_transparent.png"" class="cmp-full-col-img" alt="">
     </div>
 </section>
 
-<section class="row">
-    <div class="col-md-6 section-col-detailed section-col-gray">
-        <div class="section-col-detailed-container">
-            <img src="/images/mock_1.webp" class="cmp-full-col-img" alt="">
+<section class="row justify-content-md-center section-col-gray">
+    <div class="col-md-6">
+        <div class="margin-container">
+            <h3 class="line-below">Prise de RDV</h3>
+            <p>
+                La prise de RDV est obligatoire et peut se faire directement sur mon agenda en ligne : <br/>
+                <br/>
+                <a href="https://www.pagesjaunes.fr/pros/54602444" class="button button-accented">Prendre RDV</a><br/>
+                <i>Toute séance peut être déplacée ou annulée 48h à l'avance. Dans le cas contraire, elle sera due.</i>
+            </p>
         </div>
     </div>
 
-    <div id="contact-form-section" class="col-md-6 section-col-detailed section-col-gray">
-        <h3 class="line-below">Contact</h3>
-        <form id="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST" />
-            <input type="text" name="name" id="input-contact-name" placeholder="Nom *"/>
-            <input type="email" name="email" id="input-contact-email" placeholder="Email *"/>
-            <input type="phone" name="phone" id="input-contact-phone" placeholder="Téléphone"/>
-            <textarea placeholder="Message *" name="message" id="input-contact-message"></textarea>
-            <input type="hidden" name="_subject" value="Nouveau contact">
-            <input type="hidden" name="_next" value="{{ site.url }}{% link contact.html %}?submitted=true#contact-form-section" />
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="true">
-            <a href="javascript:submit()" class="button button-accented">Envoyer</a>
-        </form>
-        <p id="contact-thanks" style="display: none;">
-            Votre message a bien été envoyé. Nous reviendrons vers vous rapidement !
-        </p>
+    <div class="col-md-6">
+        <div class="margin-container">
+            <h3 class="line-below">Venir au cabinet</h3>
+            <p>
+                Le cabine se situe au:<br/>
+                <br/>
+                <i>32 Chemin du pont des biches</i><br/>
+                <i>69250 Neuville sur Saône</i><br/>
+                <i>au Rez-De-Chaussée</i><br/>
+                <a href="https://maps.app.goo.gl/6FKRMxSEyoKGSqe97" class="link" target="_blank">(Voir sur Google Maps)</a><br/>
+                <br/>
+                N'hésitez pas à me contacter au préalable pour un premier échange: <br/>
+                <a href="{% link contact.html %}" class="button button-accented">Me contacter</a>
+            </p>
+        </div>
     </div>
+
 </section>
