@@ -36,15 +36,6 @@
     opacity: 0.8;
 }
 
-.link, .link:hover {
-    color: $color-accent-main;
-    transition: all 0.3s ease 0s;
-}
-
-.link:hover {
-    opacity: 0.8;
-}
-
 #cmp-burger-menu {
     display: flex;
     flex-direction: column;

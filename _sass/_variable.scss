@@ -8,16 +8,24 @@ $color-background-accented: #bfd1ce;
 $color-background-gray: #EEE;
 $color-background-dark: #383e3d;
 
-$font-family: Futura LT, sans-serif;
+$font-family: "Futura LT Light", sans-serif;
+$font-family-accented: "Futura LT", sans-serif;
 
 $font-size-header-extra-large: 100px;
 $font-size-header-extra-large-sm: 40px;
 $font-size-header-large: 24px;
+$font-size-header-medium: 20px;
 $font-size-menu: 18px;
 $font-size-body: 16px;
+$font-size-small: 12px;
 
 /* Specific */
 @font-face {
     font-family: "Futura LT";
-    src: url("../fonts/FuturaLT-Light.ttf");
+    src: url("../fonts/FuturaLT.woff");
+}
+
+@font-face {
+    font-family: "Futura LT Light";
+    src: url("../fonts/FuturaLT-Light.woff");
 }

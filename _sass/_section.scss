@@ -10,15 +10,30 @@
     background-color: white;
 }
 
-.margin-container {
+.col-md-6 .margin-container {
     align-self: center;
-    padding: 20% 15% 20% 15%;
+    width: 100%;
+    padding: 20% 15%;
     @include media-breakpoint-down(sm) {
-        padding: 10% 5% 10% 5%;
+        padding: 10% 5%;
         margin-top: 20px;
     }
 }
 
-.margin-container-full {
-    padding: 5% 8%
+.col-md-12 .margin-container {
+    align-self: center;
+    width: 100%;
+    padding: 5% 8%;
+    @include media-breakpoint-down(sm) {
+        padding: 5% 5%;
+        margin-top: 20px;
+    }
+}
+
+#container .row:first-child .col-md-12 .margin-container {
+    padding-top: 10% !important;
+}
+
+#container {
+    min-height: calc(100% - 57px);
 }

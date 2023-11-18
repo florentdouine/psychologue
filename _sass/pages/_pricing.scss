@@ -1,0 +1,22 @@
+.pricing-details-container {
+    display: flex;
+    height: 80px;
+    width: 80%;
+    margin: auto;
+    border-bottom: solid 1px gray;
+    align-items: center;
+}
+
+#pricing-note {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.pricing-title {
+    flex-grow: 1;
+}
+
+.pricing-title, .pricing-value {
+    font-size: $font-size-header-medium;
+}

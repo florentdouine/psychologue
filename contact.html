@@ -4,29 +4,72 @@ menu: main
 menu-title: Contact
 order: 6
 ---
-
 <section class="row section-col-gray">
+    <div class="col-md-12">
+        <div class="margin-container">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique, velit eu consectetur blandit, lectus turpis ullamcorper risus, nec fringilla lectus mauris non justo. Nullam nec justo et libero feugiat feugiat. In hac habitasse platea dictumst. Integer luctus, sem vitae pharetra commodo, velit felis laoreet nisi, vel dignissim libero urna nec sapien.
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Par téléphone :</h3>
+                    <h4>➞ <a href="tel:0781268815">07.81.26.88.15</a></h4>
+                    <br/>
+                    <br/>
+                    <h3>Par email :</h3>
+                    <h4>➞ <a href="mailto:pdouine.psychologue@yahoo.fr">pdouine.psychologue@yahoo.fr</a></h4>
+                </div>
+            
+                <div id="contact-form-section" class="col-md-6">
+                    <h3>Par message : </h3>
+                    <form id="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST" />
+                        <input type="text" name="name" id="input-contact-name" placeholder="Nom *"/>
+                        <input type="email" name="email" id="input-contact-email" placeholder="Email *"/>
+                        <input type="phone" name="phone" id="input-contact-phone" placeholder="Téléphone"/>
+                        <textarea placeholder="Message *" name="message" id="input-contact-message"></textarea>
+                        <input type="hidden" name="_subject" value="Nouveau contact">
+                        <input type="hidden" name="_next" value="{{ site.url }}{% link contact.html %}?submitted=true#contact-form-section" />
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_captcha" value="true">
+                        <a href="javascript:submit()" class="button button-accented">Envoyer</a>
+                    </form>
+                    <p id="contact-thanks" style="display: none;">
+                        Votre message a bien été envoyé. Nous reviendrons vers vous rapidement !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section class="row justify-content-md-center section-col-accented">
     <div class="col-md-6">
         <div class="margin-container">
-            <img src="/images/20230524_124938.jpg" class="cmp-full-col-img" alt="">
+            <h3 class="line-below">Prise de RDV</h3>
+            <p>
+                La prise de RDV est obligatoire et peut se faire directement sur mon agenda en ligne : <br/>
+                <br/>
+                <a href="https://www.pagesjaunes.fr/pros/54602444" class="button button-accented">Prendre RDV</a><br/>
+                <i>Toute séance peut être déplacée ou annulée 48h à l'avance. Dans le cas contraire, elle sera due.</i>
+            </p>
         </div>
     </div>
 
-    <div id="contact-form-section" class="col-md-6">
-        <h3 class="line-below">Contact</h3>
-        <form id="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST" />
-            <input type="text" name="name" id="input-contact-name" placeholder="Nom *"/>
-            <input type="email" name="email" id="input-contact-email" placeholder="Email *"/>
-            <input type="phone" name="phone" id="input-contact-phone" placeholder="Téléphone"/>
-            <textarea placeholder="Message *" name="message" id="input-contact-message"></textarea>
-            <input type="hidden" name="_subject" value="Nouveau contact">
-            <input type="hidden" name="_next" value="{{ site.url }}{% link contact.html %}?submitted=true#contact-form-section" />
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="true">
-            <a href="javascript:submit()" class="button button-accented">Envoyer</a>
-        </form>
-        <p id="contact-thanks" style="display: none;">
-            Votre message a bien été envoyé. Nous reviendrons vers vous rapidement !
-        </p>
+    <div class="col-md-6">
+        <div class="margin-container">
+            <h3 class="line-below">Venir au cabinet</h3>
+            <p>
+                Le cabine se situe au:<br/>
+                <strong>32 Chemin du pont des biches</strong><br/>
+                <strong>69250 Neuville sur Saône<br/></strong>
+                <strong>Au Rez-De-Chaussée<br/></strong>
+                <a href="https://maps.app.goo.gl/6FKRMxSEyoKGSqe97" target="_blank">Voir sur Google Maps</a><br/>
+                <br/>
+                Transports:<br/>
+- Bus 40/70 : arrêt "Neuville".<br/>
+- Bus 43 : arrêt "pont de Neuville, rive gauche".<br/>
+            </p>
+        </div>
     </div>
 </section>
