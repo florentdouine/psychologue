@@ -30,8 +30,15 @@
     }
 }
 
-#container .row:first-child .col-md-12 .margin-container {
+#container .row:first-child .col-md-12 .margin-container,
+#container .row:first-child .col-md-8 .margin-container {
     padding-top: 10% !important;
+}
+
+#container .row:first-child {
+    @include media-breakpoint-down(sm) {
+        padding-top: 30px
+    }
 }
 
 #container {
