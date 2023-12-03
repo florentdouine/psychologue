@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+header a {
+  color: $color-content-main;
+}
+
 body {
   background-color: white;
 }

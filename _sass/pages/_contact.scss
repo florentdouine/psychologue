@@ -37,6 +37,7 @@ input[type="phone"],
 textarea {
   border-radius: 0;
   -webkit-appearance: none;
+  background-color: $color-background-gray;
 }
 
 input[type="text"],

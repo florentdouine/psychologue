@@ -1,5 +1,7 @@
 #whoami-photo-container {
     background: url("/images/leaf.png");
+    height: 100%;
+    display: flex;
 }
 
 #whoami-photo-container img {

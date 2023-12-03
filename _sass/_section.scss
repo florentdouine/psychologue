@@ -13,31 +13,26 @@
 .col-md-6 .margin-container {
     align-self: center;
     width: 100%;
-    padding: 20% 15%;
+    padding: 130px 15%;
     @include media-breakpoint-down(sm) {
         padding: 10% 5%;
         margin-top: 20px;
     }
 }
 
-.col-md-12 .margin-container {
+.col-md-8 .margin-container, .col-md-12 .margin-container {
     align-self: center;
     width: 100%;
-    padding: 5% 8%;
+    padding: 130px 8%;
     @include media-breakpoint-down(sm) {
         padding: 5% 5%;
         margin-top: 20px;
     }
 }
 
-#container .row:first-child .col-md-12 .margin-container,
-#container .row:first-child .col-md-8 .margin-container {
-    padding-top: 10% !important;
-}
-
 #container .row:first-child {
     @include media-breakpoint-down(sm) {
-        padding-top: 30px
+        padding-top: 50px
     }
 }
 
