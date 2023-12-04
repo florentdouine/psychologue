@@ -7,13 +7,13 @@
         <li>
         <a href="{% link index.html %}">Priscille Douine</li>
         {% for the_page in main_pages %}
-        <li class="d-none d-sm-block">
+        <li class="d-none d-md-block">
             <a href="{{ the_page.url | prepend: site.baseurl }}">
                 {{ the_page.menu-title }}
             </a>
         </li>
         {% endfor %}
-        <li class="d-sm-none" >
+        <li class="d-md-none" >
             <button id="link-mobile-menu" onclick="toggleMenu()">
                 Menu
                 <span for="check" id="cmp-burger-menu">
@@ -26,7 +26,7 @@
     </ul>
 </nav>
 
-<div id="popover-menu" class="d-sm-none">
+<div id="popover-menu" class="d-md-none">
     <ul id="popover-links">
         {% for the_page in all_pages %}
         <li>

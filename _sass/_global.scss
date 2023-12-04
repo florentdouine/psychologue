@@ -50,8 +50,13 @@ a {
   cursor: pointer;
 }
 
-p {
+p, ul {
   line-height: 30px;
+}
+
+ul {
+  margin-left: 30px;
+  list-style: circle;
 }
 
 strong {
