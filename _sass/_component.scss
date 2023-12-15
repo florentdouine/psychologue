@@ -1,29 +1,19 @@
 .button {
-    padding: 12px 0px;
+    padding: 12px 12px;
     line-height: 15px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     white-space: nowrap;
     text-align: center;
-    max-width: 200px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.button.button-arrowed:hover::after {
-    left: 25px;
-}
-
-.button.button-arrowed::after {
-    content: "";
-    width: 35px;
-    height: 12px;
     display: inline-block;
-    position: relative;
-    left: 10px;
-    background-image: url("/images/arrow-white.png");
-    transition: all 0.3s ease 0s;
+    justify-content: center;
+    width: 200px;
+}
+
+.button-small {
+    padding: 8px 12px;
+    font-size: $font-size-small;
+    width: inherit;
 }
 
 .button-accented {
