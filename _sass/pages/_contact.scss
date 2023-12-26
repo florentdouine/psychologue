@@ -1,7 +1,13 @@
+#contact-section img {
+  width: 350px;
+  max-width: 100%;
+  margin-top: 48px;
+  border-radius: 12px;
+}
+
 #contact-form-section {
     display: flex;
     flex-direction: column;
-    align-self: center;
 }
 
 #contact-form {
