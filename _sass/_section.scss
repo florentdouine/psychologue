@@ -16,7 +16,6 @@
     padding: 130px 15%;
     @include media-breakpoint-down(sm) {
         padding: 10% 5%;
-        margin-top: 20px;
     }
 }
 
@@ -26,11 +25,10 @@
     padding: 130px 8%;
     @include media-breakpoint-down(sm) {
         padding: 5% 5%;
-        margin-top: 20px;
     }
 }
 
-#container .row:first-child {
+#container>.row:first-child {
     @include media-breakpoint-down(sm) {
         padding-top: 100px
     }
