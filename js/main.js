@@ -75,3 +75,18 @@ ScrollReveal().reveal('.anim-bottom-apparition', {
 function submit() {
     document.getElementsByTagName("form")[0].submit()
 }
+
+function getURLParameters() {
+    const queryString = window.location.search;
+    return new URLSearchParams(queryString);
+}
+
+function displayThanksMessage(formId, thanksId) {
+    if(document.getElementById(formId) == null) { return }
+    let param = getURLParameters().get('submitted')
+
+    document.getElementById(formId).style.display = (param != "true" ? "flex" : "none");
+    document.getElementById(thanksId).style.display = (param == "true" ? "flex" : "none");
+}
+
+displayThanksMessage("contact-form-button", "contact-thanks");

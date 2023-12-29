@@ -27,13 +27,13 @@ order: 6
                         <input type="phone" name="phone" id="input-contact-phone" placeholder="Téléphone"/>
                         <textarea placeholder="Message *" name="message" id="input-contact-message"></textarea>
                         <input type="hidden" name="_subject" value="Nouveau contact">
-                        <input type="hidden" name="_next" value="{{ site.url }}{% link contact.html %}?submitted=true#contact-form-section" />
+                        <input type="hidden" name="_next" value="{{ site.url }}{% link contact.html %}?submitted=true#contact-form-button" />
                         <input type="text" name="_honey" style="display:none">
                         <input type="hidden" name="_captcha" value="true">
-                        <a href="javascript:submit()" class="button button-accented">Envoyer</a>
+                        <a id="contact-form-button" href="javascript:submit()" class="button button-accented">Envoyer</a>
                     </form>
                     <p id="contact-thanks" style="display: none;">
-                        Votre message a bien été envoyé. Nous reviendrons vers vous rapidement !
+                        Votre message a bien été envoyé. Je reviendrai vers vous rapidement !
                     </p>
                 </div>
             </div>
